@@ -28,17 +28,16 @@ public class MenuPrincipal extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel1 = new javax.swing.JLabel();
-        jMenuBar1 = new javax.swing.JMenuBar();
+        jLabelFundo = new javax.swing.JLabel();
+        jMenuBarBarbeiro = new javax.swing.JMenuBar();
         jMenuCadastro = new javax.swing.JMenu();
         jMenuItem1 = new javax.swing.JMenuItem();
         jMenuItem2 = new javax.swing.JMenuItem();
         jMenu2 = new javax.swing.JMenu();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setPreferredSize(new java.awt.Dimension(1920, 1080));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/mycompany/barbershop/View/Imagens/Menu_principal_full_HD.png"))); // NOI18N
+        jLabelFundo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/mycompany/barbershop/View/Imagens/Menu_principal_full_HD.png"))); // NOI18N
 
         jMenuCadastro.setText("Cadastro");
 
@@ -50,26 +49,26 @@ public class MenuPrincipal extends javax.swing.JFrame {
         jMenuItem2.setText("Serviço");
         jMenuCadastro.add(jMenuItem2);
 
-        jMenuBar1.add(jMenuCadastro);
+        jMenuBarBarbeiro.add(jMenuCadastro);
 
         jMenu2.setText("Edit");
-        jMenuBar1.add(jMenu2);
+        jMenuBarBarbeiro.add(jMenu2);
 
-        setJMenuBar(jMenuBar1);
+        setJMenuBar(jMenuBarBarbeiro);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(jLabel1)
+                .addComponent(jLabelFundo)
                 .addGap(0, 94, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addGap(0, 12, Short.MAX_VALUE)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 1136, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(jLabelFundo, javax.swing.GroupLayout.PREFERRED_SIZE, 1136, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
         pack();
@@ -101,9 +100,9 @@ public class MenuPrincipal extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabelFundo;
     private javax.swing.JMenu jMenu2;
-    private javax.swing.JMenuBar jMenuBar1;
+    private javax.swing.JMenuBar jMenuBarBarbeiro;
     private javax.swing.JMenu jMenuCadastro;
     private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JMenuItem jMenuItem2;

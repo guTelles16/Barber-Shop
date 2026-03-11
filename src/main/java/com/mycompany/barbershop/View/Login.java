@@ -28,6 +28,7 @@ public class Login extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jButton1 = new javax.swing.JButton();
         TextSenha = new javax.swing.JPasswordField();
         TextUsuario = new javax.swing.JTextField();
         jLabelSenha = new javax.swing.JLabel();
@@ -36,8 +37,13 @@ public class Login extends javax.swing.JFrame {
         jLabelFundo = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setPreferredSize(new java.awt.Dimension(1920, 1080));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jButton1.setBackground(new java.awt.Color(153, 153, 153));
+        jButton1.setFont(new java.awt.Font("URW Bookman", 1, 24)); // NOI18N
+        jButton1.setText("ENTRAR");
+        jButton1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(817, 840, 290, 40));
         getContentPane().add(TextSenha, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 710, 290, 60));
         getContentPane().add(TextUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(824, 542, 290, 70));
 
@@ -90,6 +96,7 @@ public class Login extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPasswordField TextSenha;
     private javax.swing.JTextField TextUsuario;
+    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabelFundo;
     private javax.swing.JLabel jLabelLogin;
     private javax.swing.JLabel jLabelSenha;
