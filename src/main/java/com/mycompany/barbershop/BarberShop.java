@@ -23,10 +23,10 @@ public class BarberShop {
         System.out.println(servico.getDescricao());
         System.out.println(servico.getValor());
         
-        Cliente cliente = new Cliente(1, "Roberto", 'M', "1140028922", "Rua Paulo Coelho, 33");
-        System.out.println(cliente);
+        Cliente cliente = new Cliente(1, "Roberto", "Rua Paulo Bandeira, 22", "1140028922");
+        System.out.println(cliente.getNome());
         
         Usuario usuario = new Usuario(1, "Barbeiro", "senha");
-        System.out.println(usuario);
+        System.out.println(usuario.getNome());
     }
 }
