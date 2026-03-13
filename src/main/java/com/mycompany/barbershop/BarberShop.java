@@ -4,6 +4,7 @@
 
 package com.mycompany.barbershop;
 
+import com.mycompany.barbershop.Model.Agendamento;
 import com.mycompany.barbershop.Model.Cliente;
 import com.mycompany.barbershop.Model.Servico;
 import com.mycompany.barbershop.Model.Usuario;
@@ -28,5 +29,8 @@ public class BarberShop {
         
         Usuario usuario = new Usuario(1, "Barbeiro", "senha");
         System.out.println(usuario.getNome());
+        
+        Agendamento agendamento = new Agendamento(1, cliente, servico, 25, "20/03/2026 09:00");
+        System.out.println(agendamento.getCliente().getNome());
     }
 }

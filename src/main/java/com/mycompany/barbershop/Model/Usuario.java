@@ -4,8 +4,6 @@
  */
 package com.mycompany.barbershop.Model;
 
-import java.util.Date;
-
 /**
  *
  * @author gustavo
@@ -19,7 +17,7 @@ public class Usuario extends Pessoa {
         this.senha = senha;
     }
 
-    public Usuario(int id, String nome, char sexo, Date dataNascimento, String telefone, String email, String rg, String senha, String nivelAceso) {
+    public Usuario(int id, String nome, char sexo, String dataNascimento, String telefone, String email, String rg, String senha, String nivelAceso) {
         super(id, nome, sexo, dataNascimento, telefone, email, rg);
         this.senha = senha;
         this.nivelAceso = nivelAceso;
