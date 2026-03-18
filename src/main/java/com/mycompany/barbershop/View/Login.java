@@ -4,6 +4,9 @@
  */
 package com.mycompany.barbershop.View;
 
+import com.mycompany.barbershop.LoginController;
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author gustavo
@@ -11,12 +14,14 @@ package com.mycompany.barbershop.View;
 public class Login extends javax.swing.JFrame {
     
     private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(Login.class.getName());
+    private final LoginController controller;
 
     /**
      * Creates new form Login
      */
     public Login() {
         initComponents();
+        controller = new LoginController(this);
     }
 
     /**
@@ -28,7 +33,7 @@ public class Login extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jButton1 = new javax.swing.JButton();
+        jButtonEntrar = new javax.swing.JButton();
         TextSenha = new javax.swing.JPasswordField();
         TextUsuario = new javax.swing.JTextField();
         jLabelSenha = new javax.swing.JLabel();
@@ -37,36 +42,45 @@ public class Login extends javax.swing.JFrame {
         jLabelFundo = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setMaximumSize(new java.awt.Dimension(1920, 1080));
+        setMinimumSize(new java.awt.Dimension(1920, 1080));
+        setPreferredSize(new java.awt.Dimension(1920, 1080));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jButton1.setBackground(new java.awt.Color(153, 153, 153));
-        jButton1.setFont(new java.awt.Font("URW Bookman", 1, 24)); // NOI18N
-        jButton1.setText("ENTRAR");
-        jButton1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(817, 840, 290, 40));
-        getContentPane().add(TextSenha, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 710, 290, 60));
-        getContentPane().add(TextUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(824, 542, 290, 70));
+        jButtonEntrar.setBackground(new java.awt.Color(153, 153, 153));
+        jButtonEntrar.setFont(new java.awt.Font("URW Bookman", 1, 24)); // NOI18N
+        jButtonEntrar.setText("ENTRAR");
+        jButtonEntrar.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jButtonEntrar.addActionListener(this::jButtonEntrarActionPerformed);
+        getContentPane().add(jButtonEntrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 840, 290, 40));
+        getContentPane().add(TextSenha, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 710, 290, 60));
+        getContentPane().add(TextUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 540, 290, 70));
 
         jLabelSenha.setFont(new java.awt.Font("Z003", 1, 36)); // NOI18N
         jLabelSenha.setForeground(new java.awt.Color(255, 255, 255));
         jLabelSenha.setText("Senha");
-        getContentPane().add(jLabelSenha, new org.netbeans.lib.awtextra.AbsoluteConstraints(920, 660, -1, -1));
+        getContentPane().add(jLabelSenha, new org.netbeans.lib.awtextra.AbsoluteConstraints(900, 660, -1, -1));
 
         jLabelUsuario.setFont(new java.awt.Font("Z003", 1, 36)); // NOI18N
         jLabelUsuario.setForeground(new java.awt.Color(255, 255, 255));
         jLabelUsuario.setText("Usuário");
-        getContentPane().add(jLabelUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(910, 490, -1, -1));
+        getContentPane().add(jLabelUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(880, 480, -1, -1));
 
         jLabelLogin.setFont(new java.awt.Font("Z003", 1, 48)); // NOI18N
         jLabelLogin.setForeground(new java.awt.Color(255, 255, 255));
         jLabelLogin.setText("LOGIN");
-        getContentPane().add(jLabelLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(900, 350, -1, -1));
+        getContentPane().add(jLabelLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(860, 300, -1, -1));
 
-        jLabelFundo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/mycompany/barbershop/View/Imagens/Logo_transparente_fullHD.png"))); // NOI18N
-        getContentPane().add(jLabelFundo, new org.netbeans.lib.awtextra.AbsoluteConstraints(38, 66, -1, -1));
+        jLabelFundo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/mycompany/barbershop/View/images/Logo_transparente_fullHD.png"))); // NOI18N
+        getContentPane().add(jLabelFundo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -20, -1, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jButtonEntrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonEntrarActionPerformed
+        // Executa ao clicar no botão
+        this.controller.fizTarefa();
+    }//GEN-LAST:event_jButtonEntrarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -96,10 +110,14 @@ public class Login extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPasswordField TextSenha;
     private javax.swing.JTextField TextUsuario;
-    private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButtonEntrar;
     private javax.swing.JLabel jLabelFundo;
     private javax.swing.JLabel jLabelLogin;
     private javax.swing.JLabel jLabelSenha;
     private javax.swing.JLabel jLabelUsuario;
     // End of variables declaration//GEN-END:variables
+
+    public void exibeMensagem(String mensagem) {
+        JOptionPane.showMessageDialog(null, mensagem);
+    }
 }

@@ -9,6 +9,7 @@ package com.mycompany.barbershop.Model;
  * @author gustavo
  */
 public class Usuario extends Pessoa {
+    
     protected String senha;
     protected String nivelAceso;
 

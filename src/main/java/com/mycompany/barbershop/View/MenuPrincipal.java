@@ -33,26 +33,29 @@ public class MenuPrincipal extends javax.swing.JFrame {
         jMenuCadastro = new javax.swing.JMenu();
         jMenuItem1 = new javax.swing.JMenuItem();
         jMenuItem2 = new javax.swing.JMenuItem();
-        jMenu2 = new javax.swing.JMenu();
+        jMenuServico = new javax.swing.JMenu();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setMaximumSize(new java.awt.Dimension(1920, 1080));
+        setMinimumSize(new java.awt.Dimension(1920, 1080));
+        setPreferredSize(new java.awt.Dimension(1920, 1080));
 
-        jLabelFundo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/mycompany/barbershop/View/Imagens/Menu_principal_full_HD.png"))); // NOI18N
+        jLabelFundo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/mycompany/barbershop/View/images/Menu_principal_full_HD.png"))); // NOI18N
 
         jMenuCadastro.setText("Cadastro");
 
-        jMenuItem1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/mycompany/barbershop/View/Imagens/Icons/user-interface.png"))); // NOI18N
+        jMenuItem1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/mycompany/barbershop/View/images/user-interface.png"))); // NOI18N
         jMenuItem1.setText("Cliente");
         jMenuCadastro.add(jMenuItem1);
 
-        jMenuItem2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/mycompany/barbershop/View/Imagens/Icons/tesouro-menu.png"))); // NOI18N
+        jMenuItem2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/mycompany/barbershop/View/images/tesouro-menu.png"))); // NOI18N
         jMenuItem2.setText("Serviço");
         jMenuCadastro.add(jMenuItem2);
 
         jMenuBarBarbeiro.add(jMenuCadastro);
 
-        jMenu2.setText("Edit");
-        jMenuBarBarbeiro.add(jMenu2);
+        jMenuServico.setText("Edit");
+        jMenuBarBarbeiro.add(jMenuServico);
 
         setJMenuBar(jMenuBarBarbeiro);
 
@@ -61,14 +64,16 @@ public class MenuPrincipal extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
                 .addComponent(jLabelFundo)
-                .addGap(0, 94, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(0, 12, Short.MAX_VALUE)
-                .addComponent(jLabelFundo, javax.swing.GroupLayout.PREFERRED_SIZE, 1136, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabelFundo, javax.swing.GroupLayout.PREFERRED_SIZE, 1136, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
         );
 
         pack();
@@ -101,10 +106,10 @@ public class MenuPrincipal extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel jLabelFundo;
-    private javax.swing.JMenu jMenu2;
     private javax.swing.JMenuBar jMenuBarBarbeiro;
     private javax.swing.JMenu jMenuCadastro;
     private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JMenuItem jMenuItem2;
+    private javax.swing.JMenu jMenuServico;
     // End of variables declaration//GEN-END:variables
 }

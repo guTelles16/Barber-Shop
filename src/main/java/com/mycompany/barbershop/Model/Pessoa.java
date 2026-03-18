@@ -13,6 +13,7 @@ import java.util.Date;
  * @author gustavo
  */
 abstract public class Pessoa {
+    
     protected int id;
     protected String nome;
     protected char sexo;

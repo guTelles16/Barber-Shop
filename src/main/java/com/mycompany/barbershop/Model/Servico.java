@@ -9,6 +9,7 @@ package com.mycompany.barbershop.Model;
  * @author gustavo
  */
 public class Servico {
+    
     private int id;
     private String descricao;
     private float valor;

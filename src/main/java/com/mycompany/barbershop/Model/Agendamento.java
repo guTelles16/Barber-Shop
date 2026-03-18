@@ -13,6 +13,7 @@ import javax.xml.crypto.Data;
  * @author gustavo
  */
 public class Agendamento {
+    
     private int id;
     private Cliente cliente;
     private Servico servico;

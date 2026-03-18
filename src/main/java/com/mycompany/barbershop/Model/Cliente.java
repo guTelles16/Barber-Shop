@@ -9,6 +9,7 @@ package com.mycompany.barbershop.Model;
  * @author gustavo
  */
 public class Cliente extends Pessoa {
+    
     protected String endereco;
     protected String cep;
 
