@@ -4,8 +4,10 @@
  */
 package com.mycompany.barbershop.View;
 
-import com.mycompany.barbershop.LoginController;
+import com.mycompany.barbershop.Controller.LoginController;
 import javax.swing.JOptionPane;
+import javax.swing.JPasswordField;
+import javax.swing.JTextField;
 
 /**
  *
@@ -119,5 +121,21 @@ public class Login extends javax.swing.JFrame {
 
     public void exibeMensagem(String mensagem) {
         JOptionPane.showMessageDialog(null, mensagem);
+    }
+
+    public JPasswordField getTextSenha() {
+        return TextSenha;
+    }
+
+    public void setTextSenha(JPasswordField TextSenha) {
+        this.TextSenha = TextSenha;
+    }
+
+    public JTextField getTextUsuario() {
+        return TextUsuario;
+    }
+
+    public void setTextUsuario(JTextField TextUsuario) {
+        this.TextUsuario = TextUsuario;
     }
 }

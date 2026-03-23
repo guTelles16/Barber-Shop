@@ -1,0 +1,42 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package com.mycompany.barbershop.Controller.Helper;
+
+import com.mycompany.barbershop.Model.Usuario;
+import com.mycompany.barbershop.View.Login;
+
+/**
+ *
+ * @author gustavo
+ */
+public class LoginHelper {
+    
+    private final Login view;
+
+    public LoginHelper(Login view) {
+        this.view = view;
+    }
+    
+    public Usuario obterModelo() {
+        String nome = view.getTextUsuario().getText();
+        String senha = view.getTextSenha().getText();
+        
+        Usuario modelo = new Usuario(0, nome, senha);
+        return modelo;
+    }
+    
+    public void setarModelo(Usuario modelo) {
+        String nome = modelo.getNome();
+        String senha = modelo.getSenha();
+        
+        view.getTextUsuario().setText(nome);
+        view.getTextSenha().setText(senha);
+    }
+    
+    public void limparTela() {
+        view.getTextUsuario().setText("");
+        view.getTextSenha().setText("");
+    }
+}
